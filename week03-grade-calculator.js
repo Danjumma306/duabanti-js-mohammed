@@ -1,31 +1,33 @@
 let scores = [87,45,66,59,70];
 
 
-function average(scores){
+function average(scores) {
+    if (!scores || scores.length === 0) {
+        return 0;
+    }
     let total = 0;
-    for(const score of scores){
+    for (const score of scores) {
         total += score;
     }
     return total / scores.length;
 }
 
-
 function getGrade(score){
 
     if(score >= 90 &&  score <= 100){
-        return "Grade A";
+        return "A";
     }
-    else if (scores >= 80){
-        return "Grade B";
+    else if (score  >= 80){
+        return "B";
     }
-    else if (scores >= 70 ){
-        return "Grade C";
+    else if (score >= 70 ){
+        return "C";
     }
-    else if (scores >= 60 ){
-        return "Grade D";
+    else if (score >= 60 ){
+        return "D";
     }
-    else if (scores >= 0){
-        return "Grade F";
+    else if (score >= 0){
+        return "F";
     }
     else {
         return "invalid score";
@@ -33,7 +35,7 @@ function getGrade(score){
 
 }
 
-function isValidScoresore(scores){
+function isValidScore(scores){
     for(let i = 0; i <scores.length; i++){
         if (scores[i] >= 0 && scores[i] <=100){
             console.log(`Valid score: ${scores[i]} --> ${getGrade(scores[i])}`);
@@ -46,6 +48,6 @@ function isValidScoresore(scores){
 }
 
 console.log(`Average: ${average(scores)}`);
-isValidScoresore(scores);
+isValidScore(scores);
 
 
