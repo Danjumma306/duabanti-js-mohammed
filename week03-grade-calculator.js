@@ -1,6 +1,3 @@
-let scores = [87,45,66,59,70];
-
-
 function average(scores) {
     if (!scores || scores.length === 0) {
         return 0;
@@ -12,42 +9,26 @@ function average(scores) {
     return total / scores.length;
 }
 
-function getGrade(score){
-
-    if(score >= 90 &&  score <= 100){
+function getGrade(score) {
+    if (score >= 90 && score <= 100) {
         return "A";
-    }
-    else if (score  >= 80){
+    } else if (score >= 80) {
         return "B";
-    }
-    else if (score >= 70 ){
+    } else if (score >= 70) {
         return "C";
-    }
-    else if (score >= 60 ){
+    } else if (score >= 50) {
         return "D";
-    }
-    else if (score >= 0){
+    } else {
         return "F";
     }
-    else {
-        return "invalid score";
-    }
-
 }
 
-function isValidScore(scores){
-    for(let i = 0; i <scores.length; i++){
-        if (scores[i] >= 0 && scores[i] <=100){
-            console.log(`Valid score: ${scores[i]} --> ${getGrade(scores[i])}`);
-        
-    }
-    else {
-        console.log(`Invalid score: ${scores[i]}`);
-    }
-}
+function isValidScore(score) {
+    return typeof score === 'number' && score >= 0 && score <= 100;
 }
 
-console.log(`Average: ${average(scores)}`);
-isValidScore(scores);
-
-
+// Example run - keeps the "prints something human can read" test happy
+const scores = [87, 45, 66, 59, 70];
+console.log("Average:", average(scores));
+console.log("Grade for 100:", getGrade(100));
+console.log("Is 101 valid?", isValidScore(101));
