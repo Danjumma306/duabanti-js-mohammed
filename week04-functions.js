@@ -11,15 +11,15 @@ function calculateAverage(scores) {
 }
 function getGrade(score) {
     if (score >= 90 && score <= 100) {
-        return 'A';
+        return "A";
     } else if (score >= 80) {
-        return 'B';
+        return "B";
     } else if (score >= 70) {
-        return 'C';
-    } else if (score >= 60) {
-        return 'D';
+        return "C";
+    } else if (score >= 50) {
+        return "D";
     } else {
-        return 'F';
+        return "F";
     }
 }
 
