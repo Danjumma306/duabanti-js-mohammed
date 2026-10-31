@@ -1,19 +1,16 @@
-// const score = process.argv.slice(2);
-const score = [87, 45, 66, 59, 70];
-function calculateAverage(numbers){
-    if (numbers.length === 0) {
+
+function calculateAverage(scores) {
+    if (!scores || scores.length === 0) {
         return 0;
     }
-    
     let total = 0;
-    for ( const n of score){
-        total += n;
+    for (const score of scores) {
+        total += score;
     }
-    return total / score.length;
+    return total / scores.length;
 }
-
 function getGrade(score) {
-    if (score >= 90) {
+    if (score >= 90 && score <= 100) {
         return 'A';
     } else if (score >= 80) {
         return 'B';
@@ -39,8 +36,8 @@ function calculateAge(birthYear, currentYear){
     return currentYear - birthYear;
 }
 
-
-console.log("Average score:", calculateAverage(score));
+scores = [87, 45, 66, 59, 70];
+console.log("Average score:", calculateAverage(scores));
 console.log("Grade for 100:", getGrade(100));
 console.log("Is 101 valid?", isValidScore(101));
 console.log("Formatted amount:", formatCedis(12456));
