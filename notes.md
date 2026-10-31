@@ -21,3 +21,15 @@ I got stuck on my getGrade function. I was looping over score.length but score w
 
 ## Did I use AI, and how
 I used Meta AI to review my code. I uploaded a screenshot of my code and asked for a code review. It explained the bugs in average and getGrade and why console.log(average) was printing the function instead of the result. I fixed the logic myself based on the feedback.
+
+## Week 04 (functions)
+
+## What I built
+I practiced writing reusable functions for calculating an average, converting a score to a grade, checking whether a score is valid, formatting an amount in Ghana cedis, and calculating age from a birth year.
+I used an array of scores to test the average function and printed the results of each function.
+
+## What got me stuck
+I got stuck on the average function because I had an extra closing brace and was using the score array directly instead of the function parameter. This stopped the function from working as intended.
+
+## Did I use AI, and how
+I asked AI to review my code and explain what was wrong. It pointed out the brace and variable issues in the average function, which helped me understand how to use the parameter passed into a function.
