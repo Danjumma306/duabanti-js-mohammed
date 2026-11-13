@@ -46,7 +46,7 @@ function getTopScorer(students){
 }
 console.log(getTopScorer(students));
 
-function rank(student){
+function rank(students){
     return students.slice().sort((a,b) => b.score - a.score);
 
 }
