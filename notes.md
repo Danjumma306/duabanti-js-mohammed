@@ -35,7 +35,7 @@ I got stuck on the average function because I had an extra closing brace and was
 I asked AI to review my code and explain what was wrong. It pointed out the brace and variable issues in the average function, which helped me understand how to use the parameter passed into a function.
 
 
-## week 06 (Arrays)
+## week 05 (Arrays)
 
 ## What I built
 I practiced using `map`, `filter`, and `reduce` with an array of students to get their names, find passing scores, and calculate the total score.

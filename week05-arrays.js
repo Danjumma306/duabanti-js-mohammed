@@ -11,11 +11,11 @@ const students = [
 ];
 
 
-function getName(student){
+function getNames(student){
     return students.map(student => student.name);
 
 }
-console.log(getName(students));
+console.log(getNames(students));
 
 function getPassing(students){
     return students.filter(student => student.score >= 50);
@@ -24,6 +24,9 @@ function getPassing(students){
 console.log(getPassing(students));
 
 function getTotal(students){
+    if (students === 0){
+        return 0;
+    }
     let total = students.reduce((total, student) => total + student.score, 0);
     return `The total score for the eight students is ${total}`;
 }
