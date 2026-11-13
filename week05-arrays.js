@@ -11,7 +11,7 @@ const students = [
 ];
 
 
-function getNames(student){
+function getNames(students){
     return students.map(student => student.name);
 
 }
@@ -24,17 +24,17 @@ function getPassing(students){
 console.log(getPassing(students));
 
 function getTotal(students){
-    if (students === 0){
+    if (students.length === 0){
         return 0;
     }
     let total = students.reduce((total, student) => total + student.score, 0);
-    return `The total score for the eight students is ${total}`;
+    return total;
 }
 console.log(getTotal(students));
  
 function getTopScorer(students){
     if (students === 0){
-        return undefined;
+        return 0;
     }
     let highest = students[0].score;
     for (const student of students){
