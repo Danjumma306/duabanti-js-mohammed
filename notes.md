@@ -33,3 +33,15 @@ I got stuck on the average function because I had an extra closing brace and was
 
 ## Did I use AI, and how
 I asked AI to review my code and explain what was wrong. It pointed out the brace and variable issues in the average function, which helped me understand how to use the parameter passed into a function.
+
+
+## week 06 (Arrays)
+
+## What I built
+I practiced using `map`, `filter`, and `reduce` with an array of students to get their names, find passing scores, and calculate the total score.
+
+## What got me stuck
+I got `NaN` when calculating the total because I used `students.score` instead of `student.score` inside `reduce`.
+
+## Did I use AI, and how
+I asked AI why the result was `NaN`. It explained the variable mistake and how to fix it.
